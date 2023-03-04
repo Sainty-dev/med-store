@@ -1,0 +1,24 @@
+  <form>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Medicine Name</label>
+    <input name="name" [(ngModel)]="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Medicine dosage</label>
+    <input name="dosage" [(ngModel)]="dosage" type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g 500mg">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Medication frequency</label>
+    <input name="frequency" [(ngModel)]="frequency" type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g every hour">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Instructions</label>
+    <textarea name="notes" [(ngModel)]="notes" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How to use this medication"></textarea>
+  </div>
+  <button (click)="addMedication()" *ngIf="medicine.id==0" class="btn btn-primary">
+    Add
+  </button>
+  <button (click)="updateMedication()" *ngIf="medicine.id!=0" class="btn btn-primary">
+    Update
+  </button>
+</form>
